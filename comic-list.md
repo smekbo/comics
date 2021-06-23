@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Comics
-permalink: /about/
+permalink: /listing/
 ---
 
 {%- for comic in site.collections -%}
