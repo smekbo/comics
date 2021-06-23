@@ -43,6 +43,8 @@ collections:
       - bob
     description: >-
       A witch in the forest
+      ( <a href="http://latchkeykingdom.com/">
+      Latchkey Kingdom</a> fan comic)
     sort_by: pagenum
     output: true
     permalink: /:collection/:name
