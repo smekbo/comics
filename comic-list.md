@@ -9,7 +9,7 @@ permalink: /listing/
     {%- if collection.label != "posts" -%}
     <div class="comic-list__comic">
         <h2 class="comic-list__title">
-            <a href="{{ site.baseurl }}/{{ collection.docs[0].url }}">
+            <a href="{{ site.baseurl }}{{ collection.docs[0].url }}">
             {{ collection.title }}
             </a>
         </h2>
