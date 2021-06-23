@@ -24,11 +24,25 @@ github_username:  smekbo
 
 collections_dir: comics
 collections:
-  Wolfwear:
+  authors:
+  wolfwear:
+    type: comic
+    title: Wolfwear Wearwolf
+    authors:
+      - nick
+      - bob
+    description: >-
+      A cursed hoodie and an orphan
     sort_by: pagenum
     output: true
     permalink: /:collection/:name
-  Mushroom:
+  mushroom:
+    type: comic
+    title: Mushroom
+    authors:
+      - bob
+    description: >-
+      A witch in the forest
     sort_by: pagenum
     output: true
     permalink: /:collection/:name

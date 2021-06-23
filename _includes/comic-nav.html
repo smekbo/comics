@@ -1,17 +1,32 @@
 <div class="comic-nav__wrap">
     <div class="comic-nav">
+        {%- assign collection = site.collections | where: "label", page.collection -%}
+        {%- assign pages = collection[0].docs | where: "layout", "comic_page" -%}
+
+        {%- if page.pagenum != pages[0].pagenum -%}
+        <a class="comic-nav__first" href="{{ site.baseurl }}{{ pages[0].url }}">First</a>
+        {%- else -%}
+        <span>First</span>
+        {%- endif -%}
+
         {%- if page.previous and page.previous.layout == "comic_page" -%}
         <a class="comic-nav__prev" href="{{ site.baseurl }}{{ page.previous.url }}">Prev</a>
         {%- else -%}
         <span>Prev</span>
         {%- endif -%}
 
-        <a class="comic-nav__list" href="{{ site.baseurl }}/{{ page.collection }}/list">Page List</a>
+        <a class="comic-nav__list" href="{{ site.baseurl }}/{{ page.collection }}">Index</a>
 
         {%- if page.next and page.next.layout == "comic_page" -%}
         <a class="comic-nav__next" href="{{ site.baseurl }}{{ page.next.url }}">Next</a>
         {%- else -%}
         <span>Next</span>
         {%- endif -%}
+
+        {%- if page.pagenum != pages[-1].pagenum -%}
+        <a class="comic-nav__latest" href="{{ site.baseurl }}{{ pages[-1].url }}">Latest</a>
+        {%- else -%}
+        <span>Latest</span>
+        {%- endif -%}        
     </div>
 </div>

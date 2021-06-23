@@ -1,14 +1,30 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
-.comic-nav__wrap {
-    height: 50px;
+.post-header__wrap, .comic-nav__wrap {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.post-header__wrap {
+    height: 150px;
+    .post-header {
+        font-size: 20px;
+        margin-bottom: 0px;
+        h1 {
+            margin-bottom: 0px;
+        }
+        .post-meta {
+            margin-left: 5px;
+        }
+    }    
+}
+
+.comic-nav__wrap{
+    height: 50px;
+}
 .comic-nav {
-    width: 12em;
+    width: 17em;
     font-size: 20px;
     margin-bottom: 5px;
 
@@ -21,8 +37,22 @@
         border-right: 2px solid grey;
         border-left: 2px solid grey;
     }
-    // .comic-nav__prev {
-    // }
-    // .comic-nav__next {
-    // }
+    .comic-nav__next {
+        border-right: 1px solid grey;
+        margin-right: 2px;
+    }
+    .comic-nav__prev {
+        border-left: 1px solid grey;
+        margin-left: 2px;
+    }
+}
+
+.comic-list__comic{
+    margin-bottom: 40px;
+    .comic-list__title {
+        margin-bottom: 0px;
+    }
+    .comic-list__authors {
+        margin-bottom: 15px;
+    }
 }

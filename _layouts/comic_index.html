@@ -8,22 +8,18 @@ layout: default
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ collection[0].title | escape }}</h1>
+    <h1 class="post-title p-name" itemprop="name headline">
+      {{ collection[0].title | escape }} Index
+    </h1>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
 
-    <h2>
-      <a href="{{ site.baseurl }}{{ pages[0].url }}">First Page</a>
-    </h2>
-    
-    <h2>
-      <a href="{{ site.baseurl }}{{ pages[-1].url }}">Latest Page</a>
-    </h2>
-
-    <h2>
-      <a href="{{ site.baseurl }}/{{ collection[0].label }}">Page Index</a>
-    </h2>    
+    {%- for page in pages -%}
+    <div>
+        <a href="{{ site.baseurl }}{{ page.url }}">{{ collection[0].title }} {{ page.pagenum }}</a>
+    </div>
+    {%- endfor -%}
 
   </div>
 
