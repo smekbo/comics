@@ -7,14 +7,6 @@ layout: default
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
   </header>
 
-  {%- if page.previous -%}
-  <a href="{{ page.previous.url }}">Prev</a>
-  {%- endif -%}
-
-  {%- if page.next -%}
-  <a href="{{ page.next.url }}">Next</a>
-  {%- endif -%}
-
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>

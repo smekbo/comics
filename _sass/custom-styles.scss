@@ -1,2 +1,28 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+.comic-nav__wrap {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comic-nav {
+    width: 12em;
+    font-size: 20px;
+    margin-bottom: 5px;
+
+    a, span {
+        text-decoration: none;
+        padding: 0px 12px;
+        margin-bottom: 5px;
+    }
+    .comic-nav__list {
+        border-right: 2px solid grey;
+        border-left: 2px solid grey;
+    }
+    // .comic-nav__prev {
+    // }
+    // .comic-nav__next {
+    // }
+}

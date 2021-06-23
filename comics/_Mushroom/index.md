@@ -1,12 +1,11 @@
 ---
 layout: comic_landing
-title:  "Wolfwear"
-date:   2021-06-22 18:14:48 +0000
+title:  "Musroom"
 author: bob
-categories: wolfwear comic
+categories: mushroom comic
 ---
 
-{%- assign pages = site.Wolfwear | where: "layout", "comic_page" -%}
+{%- assign pages = site.Mushroom | where: "layout", "comic_page" -%}
 
 <div>
 <a href="{{ site.baseurl }}{{ pages[0].url }}">First Page</a>

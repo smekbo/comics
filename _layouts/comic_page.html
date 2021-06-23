@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: default_wide
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
+  <!-- <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
@@ -24,19 +24,23 @@ layout: default
             {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
       {%- endif -%}</p>
-  </header>
+  </header> -->
 
-  {%- if page.previous -%}
-  <a href="{{ page.previous.url }}">Prev</a>
-  {%- endif -%}
-
-  {%- if page.next -%}
-  <a href="{{ page.next.url }}">Next</a>
-  {%- endif -%}
+  {%- include comic-nav.html -%}
 
   <div class="post-content e-content" itemprop="articleBody">
+    {%- if page.next and page.next.layout == "comic_page" -%}
+      <a href="{{ site.baseurl }}{{ page.next.url }}">
+        <img src="{{ site.baseurl }}/assets/img/{{ page.image }}" >
+      </a>
+    {%- else -%}
+      <img src="{{ site.baseurl }}/assets/img/{{ page.image }}" >
+    {%- endif -%}
+  
     {{ content }}
   </div>
+
+  {%- include comic-nav.html -%}
 
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}

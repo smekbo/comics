@@ -13,22 +13,25 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Comic Template Dev
-email: your-email@example.com
+title: Smekbo
+email: dont-have-one@just-dm.me
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  A jekyll minima based template I spun up to host comics and ???
 baseurl: "/comics" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: smekbo
+github_username:  smekbo
 
 collections_dir: comics
 collections:
   Wolfwear:
+    sort_by: pagenum
     output: true
-    permalink: /comics/:collection/:name
+    permalink: /:collection/:name
+  Mushroom:
+    sort_by: pagenum
+    output: true
+    permalink: /:collection/:name
 
 # Build settings
 markdown: kramdown
