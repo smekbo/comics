@@ -56,6 +56,11 @@ plugins:
   - jekyll-feed
 paginate: false
 
+feed:
+  collections:
+    - authors
+    - mushroom
+    - wolfwear
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

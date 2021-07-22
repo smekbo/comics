@@ -10,7 +10,7 @@
         {%- endif -%}
 
         {%- if page.previous and page.previous.layout == "comic_page" -%}
-        <a class="comic-nav__prev" href="{{ site.baseurl }}{{ page.previous.url }}">Prev</a>
+        <a id="comic-nav_prev" class="comic-nav__prev" href="{{ site.baseurl }}{{ page.previous.url }}">Prev</a>
         {%- else -%}
         <span>Prev</span>
         {%- endif -%}
@@ -18,7 +18,7 @@
         <a class="comic-nav__list" href="{{ site.baseurl }}/{{ page.collection }}">Index</a>
 
         {%- if page.next and page.next.layout == "comic_page" -%}
-        <a class="comic-nav__next" href="{{ site.baseurl }}{{ page.next.url }}">Next</a>
+        <a id="comic-nav_next" class="comic-nav__next" href="{{ site.baseurl }}{{ page.next.url }}">Next</a>
         {%- else -%}
         <span>Next</span>
         {%- endif -%}

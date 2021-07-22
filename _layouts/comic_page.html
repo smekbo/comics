@@ -1,9 +1,9 @@
 ---
-layout: default_wide
+layout: default
 ---
 
-{%- assign collection = site.collections | where: "label", page.collection -%}
-{%- assign collection = collection[0] -%}
+{% assign collection = site.collections | where: "label", page.collection %}
+{% assign collection = collection[0] %}
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -11,29 +11,29 @@ layout: default_wide
     <header class="post-header">
       <h1 class="post-title p-name" itemprop="name headline">{{ collection.title | escape }}</h1>
       <h3>Page {{ page.pagenum }}</h3>
-      <p class="post-meta">{%- include authors.html -%}</p>
+      <p class="post-meta">{% include authors.html %}</p>
     </header>
   </div>
 
-  {%- include comic-nav.html -%}
+  {% include comic-nav.html %}
 
   <div class="post-content e-content" itemprop="articleBody">
-    {%- if page.next and page.next.layout == "comic_page" -%}
+    {% if page.next and page.next.layout == "comic_page" %}
       <a href="{{ site.baseurl }}{{ page.next.url }}">
         <img src="{{ site.baseurl }}/assets/img/{{ page.image }}" >
       </a>
-    {%- else -%}
+    {% else %}
       <img src="{{ site.baseurl }}/assets/img/{{ page.image }}" >
-    {%- endif -%}
+    {% endif %}
   
     {{ content }}
   </div>
 
-  {%- include comic-nav.html -%}
+  {% include comic-nav.html %}
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>

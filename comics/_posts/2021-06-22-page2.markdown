@@ -1,8 +1,0 @@
----
-layout: post
-title:  "Page 2"
-date:   2021-06-22 18:14:48 +0000
-author: bob
-categories: jekyll update
----
-Testing
