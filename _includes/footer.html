@@ -5,13 +5,15 @@
 
     <div class="footer-col-wrapper">
       <div class="footer-col">
+      {% if page.collection %}
         <p class="feed-subscribe">
-          <a href="{{ 'feed/{{ page.collection }}.xml' | relative_url }}">
+          <a href="{{ 'feed/' | append: page.collection | append: '.xml' | relative_url }}">
             <svg class="svg-icon orange">
               <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-            </svg><span>Subscribe</span>
+            </svg><span>Subscribe to {{ page.collection }}</span>
           </a>
         </p>
+      {% endif %}
       {%- if site.author %}
         <ul class="contact-list">
           {% if site.author.name -%}
