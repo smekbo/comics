@@ -18,16 +18,20 @@ layout: default
   {% include comic-nav.html %}
 
   <div class="post-content e-content" itemprop="articleBody">
-    {% if page.next and page.next.layout == "comic_page" %}
-      <a href="" class="prev-sector"></a>
-      <a href="{{ site.baseurl }}{{ page.next.url }}">
+
+    <div class="comic-page">
+      {% if page.next and page.next.layout == "comic_page" %}
+        <a href="" class="prev-sector"></a>
+        <a href="{{ site.baseurl }}{{ page.next.url }}">
+          <img src="{{ site.baseurl }}/assets/img/{{ page.image }}" >
+        </a>
+      {% else %}
         <img src="{{ site.baseurl }}/assets/img/{{ page.image }}" >
-      </a>
-    {% else %}
-      <img src="{{ site.baseurl }}/assets/img/{{ page.image }}" >
-    {% endif %}
-  
-    {{ content }}
+      {% endif %}
+    
+      {{ content }}
+    </div>
+
   </div>
 
   {% include comic-nav.html %}
