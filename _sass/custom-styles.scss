@@ -56,3 +56,18 @@
         margin-bottom: 15px;
     }
 }
+
+.portfolio-wrapper{
+    .piece-wrapper{
+        p {
+            margin: 0px;
+            padding: 0px;
+        }
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+    label{
+        font-style: italic;
+        color:rgb(85, 85, 85);
+    }
+}

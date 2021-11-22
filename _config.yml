@@ -22,7 +22,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: smekbo
 github_username:  smekbo
 
-collections_dir: comics
+collections_dir: collections
 collections:
   authors:
   wolfwear:
@@ -48,6 +48,13 @@ collections:
     sort_by: pagenum
     output: true
     permalink: /:collection/:name
+  animation_portfolio:
+    type: portfolio
+    title: Animation Portfolio
+    authors:
+      - bob
+    output: true
+    permalink: /:collection/:name    
 
 # Build settings
 markdown: kramdown
