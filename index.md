@@ -7,3 +7,4 @@ layout: home
 <p>Kind of a work-in-progress.</p>
 <p>Wouldn't it be embarrassing if I left this message here for years?</p>
 Why not check out some <a href="listing">COMICS</a>
+Also I have a <a href="https://ko-fi.com/smekbo">ko-fi</a>
